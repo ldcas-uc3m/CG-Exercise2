@@ -5,8 +5,6 @@ By Luis Daniel Casais Mezquida and Lucía María Moya Sans
 #include "colors.inc"
 #include "shapes.inc"
 
-#include "texture.inc"
-
 
 global_settings{ assumed_gamma 1 }
 
