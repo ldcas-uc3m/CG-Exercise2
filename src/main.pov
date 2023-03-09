@@ -6,6 +6,7 @@ By Luis Daniel Casais Mezquida and Lucía María Moya Sans
 #include "shapes.inc"
 
 #include "texture.inc"
+#include "bunny.inc"
 
 
 global_settings{ assumed_gamma 1 }
@@ -40,7 +41,11 @@ plane { <0, 0, 1>, 0
 
 
 // OBJECTS
-
+object {
+    Bunny
+    scale <20.0, 20.0, 20.0> // <x, y, z>
+    texture {bunny_texture}
+}
 
 // ROOM
 plane { <0, 1, 0>, 0

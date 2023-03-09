@@ -1,3 +1,4 @@
-cd src/
-povray src/texture/texture.ini
-povray src/main.ini
+cd src/texture/
+povray texture.ini
+cd ..
+povray main.ini
