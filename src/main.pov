@@ -1,5 +1,6 @@
 /*
 By Luis Daniel Casais Mezquida and Lucía María Moya Sans
+Bunnyception: bunny reproduction in multiverse
 */
 
 #include "colors.inc"
@@ -23,49 +24,71 @@ light_source {
 
 // CAMERA
 camera {
-    location <0, 1.5, -5.5>
-    look_at  <0, 1.5,  0>
+    location <0, 0, -60>
+    look_at  <0, 0,  0>
 }
 
 
 // BACKGROUND
 
-plane { <0, 0, 1>, 0
-    pigment {
-        checker color White color Gray
-    }
-    finish {
-        ambient 0.3
-    }
-}
+// plane { <0, 0, 1>, 0
+//     pigment {
+//         checker color White color Gray
+//     }
+//     finish {
+//         ambient 0.3
+//     }
+// }
 
 
 // OBJECTS
-object {
+#declare bunny = object {
     Bunny
     scale <20.0, 20.0, 20.0> // <x, y, z>
     texture {bunny_texture}
 }
 
-// ROOM
-plane { <0, 1, 0>, 0
-    pigment {
-        color Black
-    }
-    finish {
-        reflection 0.4
-    }
+#declare fractal = bunny;             
+#declare aaa = 0;               
+#while (aaa<4)               
+   #declare fractal =                
+      union {      
+         object{bunny}                          
+         object { fractal scale 0.5 translate <10,0,0>}                
+         object { fractal scale 0.5 translate <-10,0,0>}                
+         object { fractal scale 0.5 translate <0,10,0>}                
+         object { fractal scale 0.5 translate <0,-10,0>}                
+         object { fractal scale 0.5 translate <0,0,10>}                
+         object { fractal scale 0.5 translate <0,0,-10>}                
+      }             
+   #declare aaa = aaa + 1;
+#end     
 
-  }
-
-plane { <0, 0, 1>, 3
-    pigment {
-        color White
-    }
-    finish {
-        reflection 0
-        ambient 0.3
-        diffuse 0.1
-    }
-    
+object {
+   fractal rotate <0,45,> scale 10 translate <4,4,0>*(-4) 
+    rotate <0,180,0> 
 }
+
+
+// // ROOM
+// plane { <0, 1, 0>, 0
+//     pigment {
+//         color Black
+//     }
+//     finish {
+//         reflection 0.4
+//     }
+
+//   }
+
+// plane { <0, 0, 1>, 3
+//     pigment {
+//         color White
+//     }
+//     finish {
+//         reflection 0
+//         ambient 0.3
+//         diffuse 0.1
+//     }
+    
+// }
