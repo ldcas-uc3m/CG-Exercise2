@@ -28,7 +28,7 @@ bash run.sh
 In order to learn how to use POV-Ray, we recommend to use the [POV-Ray Wiki](https://wiki.povray.org/content/Documentation:Contents), although it's mostly pure documentation.
 
 More documentation and examples:
-- http://paulbourke.net
+- http://paulbourke.net/fractals/povfrac/final/
 - http://www.bugman123.com/Fractals/index.html
 - http://povray.tashcorp.net/tutorials/qd_sierpinski/
 - http://nylander.wordpress.com/tag/pov-ray/page/6/
