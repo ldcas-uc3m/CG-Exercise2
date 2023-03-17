@@ -2,6 +2,8 @@
 Simple julia fractal
 */
 
+
+
 box { <-1,-1,-1><1,1,1>
     pigment
         {

@@ -5,6 +5,7 @@ Bunnyception: bunny reproduction in multiverse
 
 #include "colors.inc"
 #include "shapes.inc"
+#include "textures.inc"
 
 #include "texture.inc"
 #include "bunny.inc"
@@ -24,12 +25,57 @@ light_source {
 
 // CAMERA
 camera {
+    fisheye
     location <0, 0, -60>
     look_at  <0, 0,  0>
 }
 
 
 // BACKGROUND
+
+//   sky_sphere {
+//     pigment {
+//       gradient y
+//       color_map {
+//         [0.000 0.002 color rgb <1.0, 0.2, 0.0>
+//                      color rgb <1.0, 0.2, 0.0>]
+//         [0.002 0.200 color rgb <0.8, 0.1, 0.0>
+//                      color rgb <0.2, 0.2, 0.3>]
+//       }
+//       scale 2
+//       translate -1
+//     }
+//     pigment {
+//       bozo
+//       turbulence 0.65
+//       octaves 6
+//       omega 0.7
+//       lambda 2
+//       color_map {
+//           [0.0 0.1 color rgb <0.85, 0.85, 0.85>
+//                    color rgb <0.75, 0.75, 0.75>]
+//           [0.1 0.5 color rgb <0.75, 0.75, 0.75>
+//                    color rgbt <1, 1, 1, 1>]
+//           [0.5 1.0 color rgbt <1, 1, 1, 1>
+//                    color rgbt <1, 1, 1, 1>]
+//       }
+//       scale <0.2, 0.5, 0.2>
+//     }
+//     rotate -135*x
+//   }
+
+sphere
+{ 0, 1
+  hollow // So it doesn't interfere with any media in the scene
+  texture{
+    pigment{
+        image_map{png "fractal.png"}
+    }
+  }
+  scale 100000
+}
+
+
 
 // plane { <0, 0, 1>, 0
 //     pigment {
@@ -47,10 +93,11 @@ camera {
     scale <20.0, 20.0, 20.0> // <x, y, z>
     texture {bunny_texture}
 }
+ 
 
 #declare fractal = bunny;             
 #declare aaa = 0;               
-#while (aaa<4)               
+#while (aaa<6)               
    #declare fractal =                
       union {      
          object{bunny}                          
