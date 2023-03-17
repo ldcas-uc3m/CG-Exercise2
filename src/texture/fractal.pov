@@ -1,7 +1,7 @@
 /*
 Simple julia fractal
+1024x1024
 */
-
 
 
 box { <-1,-1,-1><1,1,1>
@@ -15,6 +15,7 @@ box { <-1,-1,-1><1,1,1>
             ambient 0.3
         }
 }
+
 
 camera {
     orthographic

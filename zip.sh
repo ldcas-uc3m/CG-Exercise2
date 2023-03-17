@@ -10,4 +10,4 @@ git checkout main
 
 
 # zip it (excluding useless stuff)
-zip -r P1-100429021-100383016.zip . -x zip.sh *.git\* README.md img\* run.sh src/main.exr
+zip -r P2-100429021-100383016.zip . -x zip.sh *.git\* README.md img\* run.sh
