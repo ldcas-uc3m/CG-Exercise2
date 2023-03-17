@@ -4,12 +4,16 @@ Computer Graphics 22/23
 Bachelor's Degree in Computer Science and Engineering, grp. 89  
 Universidad Carlos III de Madrid
 
-# Project description
+## Project description
 Generate a scene containing at least one fractal graphic made with POV-Ray.  
 
 Any of the techniques (or combination of them) that generate fractal elements can be used: language primitives, texture patterns, recursive functions, reflections or infinite repetitions.
 
-# Installation and execution
+The generated image is the following:
+
+![result](img/result.png)
+
+## Installation and execution
 
 First install [POV-Ray](https://github.com/POV-Ray/povray/tree/3.7-stable).
 
@@ -24,7 +28,7 @@ To render the file (`src/main.png`), run:
 bash run.sh
 ```
 
-# Extra information
+## Extra information
 In order to learn how to use POV-Ray, we recommend to use the [POV-Ray Wiki](https://wiki.povray.org/content/Documentation:Contents), although it's mostly pure documentation.
 
 More documentation and examples:
